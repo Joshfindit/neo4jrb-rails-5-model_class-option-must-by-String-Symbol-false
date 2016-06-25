@@ -1,0 +1,1 @@
+# neo4jrb-rails-5-model_class-option-must-by-String-Symbol-false
