@@ -1,41 +1,24 @@
-# neo4jrb-rails-5-model_class-option-must-by-String-Symbol-false
+# README
 
-Created for figuring out why this error is happening:
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
+Things you may want to cover:
 
-```
-ArgumentError in UshioProductsController#index
-model_class option must by String, Symbol, false, nil, or an Array of Symbols/Strings (was UshioProduct(description: String, name: String, sku: String)) (Class#tagged_products)
+* Ruby version
 
-Extracted source (around line #6):
-              
+* System dependencies
 
-  has_many :out, :related, type: :RELATED, model_class: ConceptualTag
-  has_many :in, :tagged_products, type: :TAGGED, model_class: UshioProduct
+* Configuration
 
+* Database creation
 
-end
+* Database initialization
 
-Rails.root: /Users/Temp/Freshagain.Templated
+* How to run the test suite
 
-Application Trace | Framework Trace | Full Trace
-app/models/conceptual_tag.rb:6:in `<class:ConceptualTag>'
-app/models/conceptual_tag.rb:1:in `<top (required)>'
-app/models/ushio_product.rb:8:in `<class:UshioProduct>'
-app/models/ushio_product.rb:1:in `<top (required)>'
-app/controllers/ushio_products_controller.rb:7:in `index'
-Request
+* Services (job queues, cache servers, search engines, etc.)
 
-Parameters:
+* Deployment instructions
 
-None
-Toggle session dump
-Toggle env dump
-Response
-
-Headers:
-
-None
-```
-
-
+* ...

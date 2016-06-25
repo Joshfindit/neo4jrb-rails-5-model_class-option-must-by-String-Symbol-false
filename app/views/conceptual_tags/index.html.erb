@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conceptual Tags</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Related</th>
+      <th>Tagged products</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conceptual_tags.each do |conceptual_tag| %>
+      <tr>
+        <td><%= conceptual_tag.name %></td>
+        <td><%= conceptual_tag.related %></td>
+        <td><%= conceptual_tag.tagged_products %></td>
+        <td><%= link_to 'Show', conceptual_tag %></td>
+        <td><%= link_to 'Edit', edit_conceptual_tag_path(conceptual_tag) %></td>
+        <td><%= link_to 'Destroy', conceptual_tag, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conceptual Tag', new_conceptual_tag_path %>

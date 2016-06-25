@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ushio Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Sku</th>
+      <th>Tagged</th>
+      <th>Related</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ushio_products.each do |ushio_product| %>
+      <tr>
+        <td><%= ushio_product.name %></td>
+        <td><%= ushio_product.description %></td>
+        <td><%= ushio_product.sku %></td>
+        <td><%= ushio_product.tagged %></td>
+        <td><%= ushio_product.related %></td>
+        <td><%= link_to 'Show', ushio_product %></td>
+        <td><%= link_to 'Edit', edit_ushio_product_path(ushio_product) %></td>
+        <td><%= link_to 'Destroy', ushio_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ushio Product', new_ushio_product_path %>

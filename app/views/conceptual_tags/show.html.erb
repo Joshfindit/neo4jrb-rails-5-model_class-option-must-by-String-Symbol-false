@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @conceptual_tag.name %>
+</p>
+
+<p>
+  <strong>Related:</strong>
+  <%= @conceptual_tag.related %>
+</p>
+
+<p>
+  <strong>Tagged products:</strong>
+  <%= @conceptual_tag.tagged_products %>
+</p>
+
+<%= link_to 'Edit', edit_conceptual_tag_path(@conceptual_tag) %> |
+<%= link_to 'Back', conceptual_tags_path %>

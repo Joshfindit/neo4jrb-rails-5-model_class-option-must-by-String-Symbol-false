@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ushio_product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ushio_product.description %>
+</p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @ushio_product.sku %>
+</p>
+
+<p>
+  <strong>Tagged:</strong>
+  <%= @ushio_product.tagged %>
+</p>
+
+<p>
+  <strong>Related:</strong>
+  <%= @ushio_product.related %>
+</p>
+
+<%= link_to 'Edit', edit_ushio_product_path(@ushio_product) %> |
+<%= link_to 'Back', ushio_products_path %>

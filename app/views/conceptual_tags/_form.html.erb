@@ -1,0 +1,32 @@
+<%= form_for(conceptual_tag) do |f| %>
+  <% if conceptual_tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(conceptual_tag.errors.count, "error") %> prohibited this conceptual_tag from being saved:</h2>
+
+      <ul>
+      <% conceptual_tag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :related_id %>
+    <%= f.text_field :related_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tagged_products_id %>
+    <%= f.text_field :tagged_products_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,42 @@
+<%= form_for(ushio_product) do |f| %>
+  <% if ushio_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ushio_product.errors.count, "error") %> prohibited this ushio_product from being saved:</h2>
+
+      <ul>
+      <% ushio_product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sku %>
+    <%= f.text_field :sku %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tagged_id %>
+    <%= f.text_field :tagged_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :related_id %>
+    <%= f.text_field :related_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

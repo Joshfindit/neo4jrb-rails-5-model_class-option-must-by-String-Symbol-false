@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  related: one
+  tagged_products: one
+
+two:
+  name: 
+  related: two
+  tagged_products: two
